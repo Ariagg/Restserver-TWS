@@ -33,6 +33,9 @@ class Rest_member extends REST_Controller {
     }
 
     function index_post(){
+        //--------------------------------------------
+        // Meruppakan implementasi dari metode POST
+        //--------------------------------------------
         $data = array(
             'Id' => $this->post('Id'),
             'nama_member' =>$this->post('nama_member'),
@@ -48,6 +51,9 @@ class Rest_member extends REST_Controller {
     }
 
     function index_put(){
+        //--------------------------------------------
+        // Meruppakan implementasi dari metode PUT
+        //--------------------------------------------
         $id = $this->put('Id');
         $data = array(
             'Id' => $this->put('Id'),
@@ -65,6 +71,9 @@ class Rest_member extends REST_Controller {
     }
 
     function index_delete(){
+        //--------------------------------------------
+        // Meruppakan implementasi dari metode DELETE
+        //--------------------------------------------
         $id = $this->delete('Id');
         $this->db->where('Id', $id);
         $delete = $this->db->delete('member');
